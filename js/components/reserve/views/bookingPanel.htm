@@ -1,0 +1,68 @@
+<form class="container form-horizontal" ng-controller="BookingController">
+  <fieldset>
+    <legend>Reserve Seats</legend>
+    <div class="form-group">
+      <label for="selectT" class="col-lg-2 control-label">Theatre</label>
+      <div class="col-lg-10">
+        <select ng-model="selectedTheatre" 
+        ng-options="item.name for item in theatres"
+        ng-change="getTheatreMovies()"
+        ng-required="true"
+        class="form-control" id="selectT">
+        <option value=""> Select Theater</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="selectM" class="col-lg-2 control-label">Movie</label>
+      <div class="col-lg-10">
+        <select ng-model="selectedMovie" 
+        ng-options="item.name for item in movies" 
+        ng-change="getMovieShowTimes()"
+        ng-required="true"
+        class="form-control" id="selectM">
+        <option value=""> Select Movie</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="selectDate" class="col-lg-2 control-label">Date picker</label>
+      <div class="col-lg-10">
+        <input ng-model="selectedDate" type="text" class="angular-datepicker-input"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="selectShw" class="col-lg-2 control-label">Show Times</label>
+      <div class="col-lg-10">
+        <select ng-model="selectedTime" 
+        ng-options="item.showTime for item in showtimes" 
+        ng-change="getAvailableSeats()"
+        class="form-control" id="selectShw">
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="selectSeats" class="col-lg-2 control-label">Number of Seats</label>
+      <div class="col-lg-10">
+        <select ng-model="selectedSeats" class="form-control" id="selectSeats">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </div>
+
+    
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TheatreWebClient">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/angular-datepicker.css" rel="stylesheet">
+    </head>
+    <body>
+    
+    <div ng-show="showNavBar" ng-include="'js/components/common/views/navbar.htm'"></div>
+    <div ng-view></div>
+
+
+
+
+    <script src="js/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-cookies.js"></script>
+    <script src="js/angular-datepicker.js"></script>
+
+    <script src="js/components/app.js"></script>
+    <script src="js/components/login/controllers.js"></script>
+    <script src="js/components/login/services.js"></script>
+    <script src="js/components/common/NavBarController.js"></script>
+    <script src="js/components/reserve/BookingController.js"></script>
+    <script src="js/components/common/MovieService.js"></script>
+    
+    
+    </body>
+</html>
