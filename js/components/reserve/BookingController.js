@@ -79,6 +79,7 @@ myApp.controller('BookingController',
 
                     if (response.status == 200) {
                         console.log(JSON.stringify(response.data));
+                          $location.path('/payment');
                     } else {
 
                     }

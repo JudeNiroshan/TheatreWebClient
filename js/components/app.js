@@ -21,6 +21,10 @@ var myApp = angular.module('TheatreWebClient', ['ngRoute', 'ngCookies'])
         templateUrl: 'js/components/reserve/views/bookingPanel.htm',
         controller: 'BookingController'
     })
+    .when('/payment', {
+        templateUrl: 'js/components/payment/views/paymentChoosePanel.htm',
+        controller: 'PaymentController'
+    })
     .otherwise({
         redirectTo: '/login'
     });
