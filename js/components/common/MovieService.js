@@ -71,5 +71,24 @@ myApp.factory('MovieService',
 
         };
 
+        service.saveBooking = function (theaterId, movieId, date, seats, callback) {
+
+                console.log('inside the saveBooking() ::::: ');
+               $http({
+                    method : "POST",
+                    url : SERVER_PATH + '/booking',
+                    dataType: 'json',
+                    data: {theatreId: theaterId, movieId: movieId, bookingDate: date, numberOfSeats: seats},
+                    headers: {
+                            "Content-Type": "application/json"
+                        }
+                }).then(function (response) {
+                   callback(response);
+               });
+
+            
+            
+        };
+
         return service;
 }]);
