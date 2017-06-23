@@ -53,21 +53,21 @@ myApp.controller('BookingController',
 
 
 
-            $scope.getAvailableSeats = function () {
+            // $scope.getAvailableSeats = function () {
 
 
 
-                MovieService.getAvailableSeats($scope.selectedTheatre, $scope.selectedMovie, $scope.selectedDate, function (response) {
+            //     MovieService.getAvailableSeats($scope.selectedTheatre, $scope.selectedMovie, $scope.selectedDate, function (response) {
 
-                    if (response.status == 200) {
-                        $scope.selectedSeats = response.data;
-                        console.log(JSON.stringify(response.data));
-                    } else {
+            //         if (response.status == 200) {
+            //             $scope.selectedSeats = response.data;
+            //             console.log(JSON.stringify(response.data));
+            //         } else {
 
-                    }
-                });
+            //         }
+            //     });
 
-            }
+            // }
 
 
 
