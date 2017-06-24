@@ -1,26 +1,70 @@
 <div ng-controller="PaymentController">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h2 class="col-md-offset-1">Booking Summary</h2>
+            <h2 class="col-md-offset-5">Booking Summary</h2>
         </div>
         <div class="panel-body col-md-offset-4">
-            <span><p>Theatre : </p></span>
-            <span><p>Movie : </p></span>
-            <span><p>Time-slot : </p></span>
-            <span><p>Number of seats : </p></span>
-            <span><p>Theatre : </p></span>
-            <span><p>Total Price : </p></span>
+            <div class="row">
+                <div class="col-md-3">
+                    <span><p>Theatre : </p></span>
+                </div>
+                <div class="col-md-3">
+                    <span ng-bind="tName"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <span><p>Movie : </p></span>
+                </div>
+                <div class="col-md-3">
+                   <span ng-bind = "mName"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <span><p>Date : </p></span>
+                </div>
+                <div class="col-md-3">
+                    <span ng-bind = "date"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <span><p>Time-slot : </p></span>
+                </div>
+                <div class="col-md-3">
+                    <span ng-bind = "timeslot"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <span><p>Number of seats : </p></span>
+                </div>
+                <div class="col-md-3">
+                    <span ng-bind = "seatCount"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <span><p>Total Price : </p></span>
+                </div>
+                <div class="col-md-3">
+                    <span ng-bind = "price"></span>
+                </div>
+            </div>
+            
+            
             <span><p>Payment Mode : </p></span>
             <div class="row">
                 <div class="col-md-9">
                     <div class="col-md-5">
-                        <a href="#">
-                        <img src="/img/sampath_bank.png"></img>
+                        <a href='#!/sampathBankForm'>
+                            <img src="/img/sampath_bank.png"></img>
                         </a>
                     </div>
                     <div class="col-md-5">
                         <a href="#">
-                        <img src="/img/dialog_ez_cash.png"></img>
+                            <img src="/img/dialog_ez_cash.png"></img>
                         </a>
                     </div>
                 </div>

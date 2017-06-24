@@ -73,7 +73,6 @@ myApp.factory('MovieService',
 
         service.saveBooking = function (tId, mId, date, seats, callback) {
 
-                console.log('inside the saveBooking() ::::: ');
                $http({
                     method : "POST",
                     url : SERVER_PATH + '/booking' + '/createData',
