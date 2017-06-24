@@ -4,7 +4,8 @@ myApp.controller('PaymentController',
         '$location',
         'MovieService',
         'BookingService',
-        function ($scope, $rootScope, $location, MovieService, BookingService) {
+        'PaymentService',
+        function ($scope, $rootScope, $location, MovieService, BookingService, PaymentService) {
 
             $scope.receivedData = BookingService.get();
 
@@ -14,6 +15,10 @@ myApp.controller('PaymentController',
             $scope.timeslot = '7:00';
             $scope.seatCount = $scope.receivedData.seat.seatNo;
             $scope.price = $scope.seatCount * $scope.receivedData.seat.price;
+
+            $scope.sampathBankChose = function(){
+                PaymentService.set($scope.price);
+            }
         }
     ]
 );
