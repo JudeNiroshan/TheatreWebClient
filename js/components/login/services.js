@@ -11,27 +11,9 @@ myApp.factory('LoginService',
 
         service.Login = function (username, password, callback) {
 
-            /* For testing purposes */
-            // $timeout(function(){
-            //     var response = { success: username === 'test' && password === 'test' };
-            //     if(!response.success) {
-            //         response.message = 'Username or password is incorrect';
-            //     }
-            //     callback(response);
-            // }, 1000);
-
-
-            /* Use this for real authentication
-             ----------------------------------------------*/
-            // $http.post(SERVER_PATH + '/login', { username: username, password: password } )
-            //    .success(function (response) {
-            //        console.log(response);
-            //        callback(response);
-            //    });
-
                $http({
                     method : "POST",
-                    url : SERVER_PATH + '/login',
+                    url : SERVER_PATH + '/rest' + '/login',
                     dataType: 'json',
                     data: { username: username, password: password },
                     headers: {
@@ -41,7 +23,6 @@ myApp.factory('LoginService',
                    console.log(response.data.jwtToken);
                    callback(response);
                });
-
         };
  
         service.StoreUserData = function (token) {

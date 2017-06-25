@@ -1,7 +1,7 @@
 'use strict';
 
-
-
+//WSO2 ESB host location; All APIs will be invoked to this host.
+var SERVER_PATH = 'http://192.168.57.1:8280/movie_esb';
 
 
 var myApp = angular.module('TheatreWebClient', ['ngRoute', 'ngCookies'])
